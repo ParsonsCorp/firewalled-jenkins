@@ -1,4 +1,4 @@
-# Firewalled Jenkins ![a-RESTed Jenkins](https://image.ibb.co/dDKyov/firewall_jenkins.jpg)
+# Firewalled Jenkins ![Firewalled Jenkins](https://image.ibb.co/dDKyov/firewall_jenkins.jpg)
 A simple nodejs application that utilizes Jenkins' REST API which allows users to view build logs and kick off new builds. This is used primarily by developers that work offsite and can't access Jenkins build servers due to firewall restrictions.
 
 ![Firewalled Jenkins Diagram](https://image.ibb.co/cdtJAa/firewalled_jenkins_diagram.png)
@@ -16,7 +16,7 @@ nodejs: ">=6.9"
 npm: ">=3.10.10"
 MySQL ">=5.5"
 ```
-if you want to run your mysql from a docker container you can use this command:
+If you want to run your mysql from a docker container you can use this command:
 
     docker run -d -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=database -p 3306:3306 mysql
 

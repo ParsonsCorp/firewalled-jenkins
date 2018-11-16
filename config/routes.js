@@ -92,7 +92,13 @@ module.exports.routes = {
   },
   'get /users': {
     controller    : 'Users',
-    action        : 'index'
+    action        : 'index',
+    policy: 'sessionAuth'
+  },
+  'get /jenkins': {
+    controller    : 'Jenkinsapis',
+    action        : 'index',
+    policy: 'sessionAuth'
   },
   'get /jenkins': {
     controller    : 'Jenkinsapis',

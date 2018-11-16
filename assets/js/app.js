@@ -320,13 +320,12 @@ function parseJenkinsJobs(complete_url, data) {
     $('.btn-build').click(function (e) {
         e.stopPropagation();
         var jobName = $(this).parent().attr('id');
-        console.log(jobName_url);
         if (confirm('Are you sure you want to build: ' + jobName + '?')) {
             $(this).prop("disabled", true);
             var inside_success = function inside_success(msg, status, jqXHR) {
                 divConsoleAlert('alert-success', 'SUCCESS: ', msg.notice);
             };
-            consoleAjaxCmd('POST', '/jenkins/job/build/start', 'url=' + complete_url + '&job_name=' + jobName_url, inside_success);
+            consoleAjaxCmd('POST', '/jenkins/job/build/start', 'url=' + complete_url + '&job_name=' + jobName, inside_success);
         }
         // connectToJenkinsAPI('getJenkinsJobInfo')
     });

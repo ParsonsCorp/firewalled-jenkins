@@ -43,6 +43,7 @@ var UsersController = {
         });
         ldap.authenticate(username, password, function (err, user) {
             if (err) {
+                sails.log(err);
                 return res.badRequest();
             }
             // Check to see if user is already registered
@@ -83,6 +84,7 @@ var UsersController = {
         User.update({uuid:useruuid},{secretKeyCheck:strCipherText}).exec(function afterwards(err, updated){
             if (err) {
                 // handle error here- e.g. `res.serverError(err);`
+                sails.log(err);
                 return res.serverError(err);
             }
             return res.json({
@@ -98,6 +100,7 @@ var UsersController = {
         User.find({uuid:useruuid}).exec(function afterwards(err, found){
             if (err) {
                 // handle error here- e.g. `res.serverError(err);`
+                sails.log(err);
                 return res.serverError(err);
             } else {
                 // DECRYPT
