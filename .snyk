@@ -1,0 +1,16 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - grunt-contrib-watch > tiny-lr > body-parser > debug:
+        patched: '2018-11-16T16:24:56.925Z'
+  'npm:lodash:20180130':
+    - sails-disk > waterline-criteria > lodash:
+        patched: '2018-11-16T16:24:56.925Z'
+    - sails-disk > waterline-cursor > lodash:
+        patched: '2018-11-16T16:24:56.925Z'
+  'npm:ms:20170412':
+    - grunt-contrib-watch > tiny-lr > body-parser > debug > ms:
+        patched: '2018-11-16T16:24:56.925Z'
