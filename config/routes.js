@@ -100,11 +100,6 @@ module.exports.routes = {
     action        : 'index',
     policy: 'sessionAuth'
   },
-  'get /jenkins': {
-    controller    : 'Jenkinsapis',
-    action        : 'index',
-    policy: 'sessionAuth'
-  },
   /***************************************************************************
   *                                                                          *
   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *

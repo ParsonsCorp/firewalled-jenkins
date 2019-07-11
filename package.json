@@ -1,7 +1,7 @@
 {
   "name": "firewalled-jenkins",
   "private": true,
-  "version": "0.1.26",
+  "version": "0.1.28",
   "description": "Firewalled Jenkins",
   "keywords": [],
   "dependencies": {
@@ -28,8 +28,8 @@
     "rc": "1.2.7",
     "sails": "github:lifespent/sails#hastings-fix",
     "sails-db-migrate": "^1.5.0",
-    "sails-disk": "~1.0.0",
-    "sails-mysql": "^0.11.5"
+    "sails-disk": "~1.1.2",
+    "sails-mysql": "^1.0.0"
   },
   "scripts": {
     "debug": "node debug app.js",
